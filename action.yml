@@ -23,6 +23,9 @@ inputs:
     description: 'files will copy to under remote_path'
     required: true
     default: /
+  sysusername:
+    description: 'sysusername'
+    required: true  
 
   args:
     description: 'sftp args'
@@ -39,6 +42,7 @@ runs:
     - ${{ inputs.ssh_private_key }}
     - ${{ inputs.local_path }}
     - ${{ inputs.remote_path }}
+    - ${{ inputs.sysusername}}
     - ${{ inputs.args }}
 
 branding:
